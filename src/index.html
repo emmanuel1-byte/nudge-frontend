@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Nudge - AI Reply Generator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+        rel="stylesheet"
+    />
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="gradient-text">Nudge</h1>
+            <p>Craft Your Replies with the Perfect Tone!</p>
+        </header>
+        <form id="response-form">
+            <div class="input-group">
+                <label for="text">Your Message</label>
+                <textarea
+                    id="text"
+                    name="text"
+                    placeholder="Type your message..."
+                    required
+                ></textarea>
+            </div>
+            <div class="input-group">
+                <label for="tone">Select Tone</label>
+                <select id="tone" name="tone" required>
+                    <!-- Options will be populated here -->
+                </select>
+            </div>
+            <button type="submit" class="btn">Generate Response</button>
+        </form>
+        <div id="response-output" class="output">
+            <h2>Generated Response:</h2>
+            <div class="response-container">
+                <p id="response-text"></p>
+                <button id="copy-button" class="btn-copy">
+                    <i class="fas fa-copy"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

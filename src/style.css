@@ -1,0 +1,157 @@
+/* Reset browser defaults */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text color for contrast */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    background-color: rgba(30, 30, 30, 0.95); /* Semi-transparent dark background */
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    background: linear-gradient(90deg, #ff7e5f, #feb47b, #ff6f61, #d5006d, #6a82fb, #fc5c7d); /* Multi-color gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    animation: flow 5s linear infinite; /* Adding animation for flowing effect */
+}
+
+@keyframes flow {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #b0bec5; /* Lighter gray for subtext */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #e0e0e0; /* Light text for labels */
+}
+
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #666; /* Dark border */
+    border-radius: 5px;
+    background-color: #212121; /* Darker background for inputs */
+    color: #e0e0e0; /* Light text */
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+textarea {
+    min-height: 100px;
+}
+
+textarea:focus,
+select:focus {
+    border-color: #ff6f61; /* Highlight border on focus */
+}
+
+button.btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff6f61; /* Bright button color */
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.btn:hover {
+    background-color: #d5006d; /* Darker shade on hover */
+}
+
+#response-output {
+    display: none;
+    margin-top: 20px;
+}
+
+.response-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #424242; /* Darker response background */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #666; /* Dark border */
+}
+
+#response-text {
+    flex: 1;
+    color: #e0e0e0; /* Light text color */
+    font-size: 1rem;
+}
+
+button.btn-copy {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+button.btn-copy i {
+    color: #ff6f61; /* Bright icon color */
+    font-size: 20px;
+}
+
+button.btn-copy:hover i {
+    opacity: 0.8;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    button.btn {
+        font-size: 1rem;
+    }
+
+    button.btn-copy i {
+        font-size: 18px;
+    }
+}
